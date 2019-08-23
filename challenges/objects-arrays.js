@@ -90,7 +90,7 @@ Log the result of your new array. */
 const contactInfo = [];
 
 for (let i = 0; i < graduates.length; i++){
-  contactInfo.push(graduates[i]["first_name"] + " "+ graduates[i]["email"])
+  contactInfo.push(`${graduates[i]["first_name"]} ${graduates[i]["email"]}`)
 }
 console.log(contactInfo);
 
@@ -139,8 +139,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-let lowerCase = [];
-lowerCase = zooAnimals.map(animal => {
+const lowerCase = zooAnimals.map(animal => {
   return {"Animal Name": animal["animal_name"].toLowerCase()};
 });
 
@@ -151,9 +150,8 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-let lowerPopulation = [];
 
-lowerPopulation = zooAnimals.filter((animal) => {
+const lowerPopulation = zooAnimals.filter((animal) => {
   return animal["population"] < 5;
 });
 console.log(lowerPopulation);
@@ -163,8 +161,8 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-let populationTotal = 0;
-populationTotal = zooAnimals.reduce((total, animal) => {
+
+const populationTotal = zooAnimals.reduce((total, animal) => {
   return total += animal["population"];
 }, 0)
 console.log(`Total population is ${populationTotal}`);
