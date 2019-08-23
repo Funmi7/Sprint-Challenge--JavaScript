@@ -18,11 +18,11 @@ function consume(x, y, cb) {
 */
 
 function add (x, y){
-  return console.log(x + y);
+  return console.log(`The sum of the two numbers are ${x + y}`);
 }
 
 function multiply (x, y){
-  return console.log(x * y);
+  return console.log(`The product of the two numbers are ${x * y}`);
 }
 
 function greeting (firstName, lastName) {
